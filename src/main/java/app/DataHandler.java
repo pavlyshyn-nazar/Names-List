@@ -16,10 +16,10 @@ public class DataHandler {
     }
 
     // Метод формує виведення нумерованого списку імен
-    public String formListOutput(List list) {
+    public String formListOutput(List<String> list) {
         StringBuilder sb = new StringBuilder();
         AtomicInteger count = new AtomicInteger(1);
-        for (Object name : list) {
+        for (String name : list) {
             sb.append(String.format("%d) %s%n",
                     count.getAndIncrement(), name));
         }
